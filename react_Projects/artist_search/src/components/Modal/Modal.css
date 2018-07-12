@@ -12,6 +12,14 @@
     transition: all 0.3s ease-out;
 }
 
+.Close{
+    display:inline;
+    float: right;
+    text-decoration: none;
+    color: #ccc;
+    cursor: pointer;
+}
+
 @media (min-width: 600px) {
     .Modal {
         width: 500px;

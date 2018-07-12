@@ -40,11 +40,11 @@ class Search extends Component
     
     render()
     {
-
+        
        
         return(
-        <div>
-            <h1>Search</h1>
+        <div className={classes.Container}>
+            <h1>Enter Search Criteria</h1>
             <form onSubmit={this.props.searched}>
               <div>
               <p className={classes.Entry}>Artist Name: </p><input  type='text' name='Artist Name' onChange={this.props.changedName}/>
@@ -52,9 +52,7 @@ class Search extends Component
                <div>
                <p className={classes.Entry}>Track Number: </p><input  type='number' name='Track Number' onChange={this.props.changedNumber}/>
                 </div><button
-                disabled ={this.props.searchable}
-                
-                // onClick={this.searched}
+                disabled ={!this.props.searchable}
                 className={classes.Button}
                 >
                 Search </button>

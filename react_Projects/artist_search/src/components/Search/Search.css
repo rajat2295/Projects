@@ -1,3 +1,7 @@
+.Container{
+    font-family: "gg-light";
+    color:rgb(100, 100, 100);
+}
 .Entry{
     display: inline-block;
     margin-right: 10px;
@@ -11,17 +15,43 @@
     margin: auto;
 }
 
-.Button::before{
-    content: '';
-    display: block;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.5);
-    width:60px;
-    height: 100%;
-    left: 0;
-    top:0;
-    opacity: .5s;
-    filter: blur(30px);
-    transform: translateX(-130px) skewX((-15deg));
+.Button{
+    font-family: "gg-light";
+    position: relative;
+    top:50%; 
+    left:50%;
+    transform: translateX(-50%);
+  
+  text-justify: auto;
+  font-size: 0.5rem;
+  /* height: 70px; */
+  float: left;
+  display: inline-flex;
+  font-size: 1.2rem;
+  border-radius: 100px; 
+  text-decoration: none;
+  text-align: center;
+  background: none;
+  color: white;
+  background: linear-gradient(to top, #0C959B , #04ABA3);
+  border: 1px solid #0C959B;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow:#1C5858 0px 1px; 
+  text-align: center;
+ 
+
 }
+
+.Button:focus{
+    outline:none;
+    box-shadow: none;
     
+}
+.Button:disabled{
+    background: #ccc;
+    color: black;
+    border: 1px solid #ccc;
+    box-shadow:#333 0px 1px; 
+
+}

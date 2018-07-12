@@ -26,11 +26,11 @@ class SearchResults extends Component {
             return (<SearchResult key={result.trackId}
                 artistName={result.artistName}
                 trackName={result.trackName}
-                longDescription = {result.longDescription}
-                artwork = {result.artworkUrl100} />)
+                longDescription = {result.shortDescription}
+                artwork = {result.artworkUrl30} />)
         })
         return (<div>
-          <div><h3>Search Results for "Jack"<span> <a onClick={this.props.searchRevoke}>CLEAR</a> </span></h3></div>
+          <div><h3>Search Results for "{this.props.name}"<span> <a onClick={this.props.searchRevoke}>CLEAR</a> </span></h3></div>
             {results}
         </div>);
     }

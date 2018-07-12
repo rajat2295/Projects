@@ -2,11 +2,20 @@
     font-family: "gg";
     src: url(../../assets/Fonts/Gotham-Rounded-Book.ttf)
     }
+    @font-face {
+        font-family: "gg-light";
+        src: url(../../assets/Fonts/Gotham-Rounded-Light.ttf)
+        }
+
+        @font-face {
+            font-family: "gg-medium";
+            src: url(../../assets/Fonts/Gotham-Rounded-Medium.ttf)
+            }
 
 .Home{
     width:100%;
     height:100vh;
-    margin:0;
+    margin:10px;
     position:relative;
     font-family: "gg";
     
@@ -17,6 +26,8 @@
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
+    display: inline-block;
+    
     /* border:1px #000 solid; */
     
 }
@@ -25,73 +36,47 @@
     position: relative;
     left:50%;
     transform: translateX(-50%);
+ 
     
 }
+.Image{
+
+    display: inline-block;
+    margin: 5px;
+    width:15%;
+}
+.Content{
+
+    display: inline-block;
+    padding: 10px;
+}
 .Button{
+    font-family: "gg-light";
     position: relative;
     top:50%; 
     left:50%;
     transform: translateX(-50%);
-  width: 240px;
-  height: 80px;
+  width: 260px;
+  font-size: 0.5rem;
+  height: 70px;
   font-size: 2rem;
   border-radius: 100px; 
   text-decoration: none;
   text-align: center;
   background: none;
-  color: #333;
-  border: 1px solid #333;
-  border-radius: 4px;
-  transition: .6s;
+  color: white;
+  background: linear-gradient(to top, #0C959B , #04ABA3);
+  border: 1px solid #0C959B;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow:#1C5858 0px 4px; 
+ 
 
 }
 
 .Button:focus{
     outline:none;
-}
-.Button::before{
-    content: '';
-    display: block;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.5);
-    width:60px;
-    height: 100%;
-    left: 0;
-    top:0;
-    opacity: .5s;
-    filter: blur(30px);
-    transform: translateX(-130px) skewX((-15deg));
+    box-shadow: none;
+    
 }
 
-.Button:after{
-    content:'';
-    display: block;
-    position: absolute;
-    background: rgba(46, 139, 87, 0.5);
-    width: 30px;
-    height: 100%;
-    left: 30px;
-    top: 0;
-    opacity: 0;
-    filter: blur(30px);
-    transform: translate(-100px) scaleX(-15deg);
-}
-   
-.Button:hover{
-    background: #20B2AA;
-    cursor: pointer
-}
-
-.Button:hover:after{
-
-    transform: translateX(300px) skewX(-15deg);
-    opacity: 1;
-    transition: .7s;
-}
-
-.Button:hover:before{
-   transform: translateX(300px) skewX(-15deg);
-   opacity: 1;
-   transition: .7s;
-}

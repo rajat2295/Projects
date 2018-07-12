@@ -12,6 +12,9 @@ const Modal = (props) => {
             transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
             opacity: props.show ? '1' : '0'
         }}>
+        <a className={classes.Close}
+        onClick={props.modalClosed}
+        >X</a>
         {props.children}
     </div>
     </Aux>
