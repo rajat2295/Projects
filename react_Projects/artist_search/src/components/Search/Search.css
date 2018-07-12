@@ -1,0 +1,27 @@
+.Entry{
+    display: inline-block;
+    margin-right: 10px;
+}
+.Grid{
+    display: flex;
+    flex-flow: row;
+}
+.Label{
+    width: 100%;
+    margin: auto;
+}
+
+.Button::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width:60px;
+    height: 100%;
+    left: 0;
+    top:0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX((-15deg));
+}
+    
