@@ -6,10 +6,12 @@
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px black;
     padding: 16px;
-    left: 15%;
+    margin:0px 30%;
     top: 30%;
+    width:40%;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
+    text-align: center;
 }
 
 .Close{
@@ -20,9 +22,12 @@
     cursor: pointer;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 900px) {
     .Modal {
-        width: 500px;
-        left: calc(50% - 250px);
+        width: 80%;
+        left: 0;
+        margin:40% 10%;
+        top: 0;
+        
     }
 }

@@ -15,7 +15,7 @@
 .Home{
     width:100%;
     height:100vh;
-    margin:10px;
+    
     position:relative;
     font-family: "gg";
     
@@ -25,7 +25,7 @@
     position: absolute;
     left:50%;
     top:50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-60%,-50%);
     display: inline-block;
     
     /* border:1px #000 solid; */
@@ -36,6 +36,7 @@
     position: relative;
     left:50%;
     transform: translateX(-50%);
+    text-align: center;
  
     
 }
@@ -43,7 +44,12 @@
 
     display: inline-block;
     margin: 5px;
-    width:15%;
+    width:70px;
+    height: auto;
+    
+}
+.ImageContent{
+    object-fit: cover;
 }
 .Content{
 
@@ -52,14 +58,15 @@
 }
 .Button{
     font-family: "gg-light";
+
     position: relative;
     top:50%; 
     left:50%;
     transform: translateX(-50%);
-  width: 260px;
-  font-size: 0.5rem;
-  height: 70px;
-  font-size: 2rem;
+  width: 240px;
+
+  height: 60px;
+  font-size: 1.4rem;
   border-radius: 100px; 
   text-decoration: none;
   text-align: center;
@@ -68,8 +75,9 @@
   background: linear-gradient(to top, #0C959B , #04ABA3);
   border: 1px solid #0C959B;
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow:#1C5858 0px 4px; 
+  
  
 
 }
@@ -78,5 +86,17 @@
     outline:none;
     box-shadow: none;
     
+}
+
+@media only screen and (max-width:900px){
+    .Image{
+        display: none;
+    }
+    .Content,.Head,.Button{
+        width:100%;
+    }
+    .Center{
+        transform: translate(-50%,-50%);
+    }
 }
 

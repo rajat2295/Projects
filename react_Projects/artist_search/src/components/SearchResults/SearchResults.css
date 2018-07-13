@@ -1,0 +1,11 @@
+.Clear{
+    color:#099F9D;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.Header{
+    margin:10px;
+    padding: 10px;
+    font-family: "gg";
+    font-size: 1.3rem;
+}

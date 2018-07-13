@@ -42,7 +42,7 @@ class Home extends Component {
         }
 
         if(rules.name){
-            isValid=(value==rules.name) && isValid;            
+            isValid=(value.toLowerCase()==rules.name) && isValid;            
         }
 
         if(rules.length){
@@ -112,7 +112,7 @@ class Home extends Component {
             <div className={classes.Home}>
             
                 <div className={classes.Center}>
-                <div className={classes.Image}><img src={Arrow} alt="Arrow"/></div>
+                <div className={classes.Image}><img src={Arrow} className={classes.ImageContent} alt="Arrow"/></div>
                     <div className={classes.Content}><h1 className={classes.Head}>Find your artist below</h1>
                     <button onClick={this.startSearchHandler}
                         className={classes.Button}>Search Artist</button>

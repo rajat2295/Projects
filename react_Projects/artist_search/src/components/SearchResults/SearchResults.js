@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SearchResult from './SearchResult/SearchResult'
 import axios from 'axios'
+import classes from './SearchResults.css'
 class SearchResults extends Component {
 
     state = {
@@ -30,7 +31,7 @@ class SearchResults extends Component {
                 artwork = {result.artworkUrl30} />)
         })
         return (<div>
-          <div><h3>Search Results for "{this.props.name}"<span> <a onClick={this.props.searchRevoke}>CLEAR</a> </span></h3></div>
+          <div className={classes.Header}><h3>Search Results for "{this.props.name}".  <span> <a onClick={this.props.searchRevoke } className={classes.Clear}>(Clear)</a> </span></h3></div>
             {results}
         </div>);
     }

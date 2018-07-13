@@ -1,31 +1,77 @@
 .Container{
     font-family: "gg-light";
     color:rgb(100, 100, 100);
-}
-.Entry{
-    display: inline-block;
-    margin-right: 10px;
-}
-.Grid{
-    display: flex;
-    flex-flow: row;
-}
-.Label{
-    width: 100%;
-    margin: auto;
+    border-radius: 5px;
+    
+    padding: 20px;
+    text-align: left;
+  
+    
 }
 
+.Head{
+    width:100%;
+    text-align: left;
+    margin-top: 2px;
+}
+.Col30 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+    vertical-align: middle;
+}
+.Col60{
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+    vertical-align: middle;
+}
+
+/* .Container > div{
+    width:100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+} */
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
+    float: left;
+}
+
+.Label{
+    /* padding: 12px 12px 12px 0; */
+    display: inline-block;
+    
+}
+.Entry{
+    font-family: 'gg-medium';
+    font-weight: 400;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    
+    resize: vertical;
+    background-color: #F5F5F5;
+    color:rgb(80, 79, 79);
+    box-shadow: #DBDBDB 1px 1px;
+}
+.Entry:focus{
+    outline:none;
+    
+}
+
+
 .Button{
+    float: left;
     font-family: "gg-light";
     position: relative;
-    top:50%; 
-    left:50%;
-    transform: translateX(-50%);
-  
   text-justify: auto;
-  font-size: 0.5rem;
+  font-size: 0.5rem; 
   /* height: 70px; */
-  float: left;
   display: inline-flex;
   font-size: 1.2rem;
   border-radius: 100px; 
@@ -39,11 +85,12 @@
   overflow: hidden;
   box-shadow:#1C5858 0px 1px; 
   text-align: center;
+  
  
 
-}
+} 
 
-.Button:focus{
+ .Button:focus{
     outline:none;
     box-shadow: none;
     
@@ -54,4 +101,18 @@
     border: 1px solid #ccc;
     box-shadow:#333 0px 1px; 
 
+} 
+@media screen and (max-width: 600px) {
+    .Col30, .Col60, Label {
+        width: 90%;
+        margin-top: 0;
+        text-align: center;
+        float: none;
+   
+        
+    }
+    .Button{
+        margin-top: 20px;
+       float: none;
+    }
 }
