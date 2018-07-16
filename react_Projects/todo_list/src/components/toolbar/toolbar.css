@@ -1,0 +1,20 @@
+.Toolbar{
+    display: inline-block;
+    position: inherit;
+    float: right;
+    
+    align-content: center;
+    text-align: center;
+    
+    
+    height: 100%;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 850px) {
+    .Toolbar {
+        width: 100%;
+        
+
+    }
+}

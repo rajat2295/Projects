@@ -1,0 +1,32 @@
+.Outer{
+    font-family: "gg";
+    background: linear-gradient(to top,#e5e5ff,#9999ff);
+    margin:0;
+    padding: 0;
+   width:100%;
+   background-attachment: fixed;
+   height: 100vh;
+   overflow-x: hidden;
+
+}
+.Add{
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  /* position: absolute; */
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+@font-face {
+    font-family: 'gg-medium';
+    src: url('/src/assets/fonts/Gotham-Rounded-Medium.ttf') ;
+  }
+  @font-face {
+    font-family: 'gg-light';
+    src: url('/src/assets/fonts/Gotham-Rounded-Light.ttf') ;
+  }
+  @font-face {
+    font-family: 'gg';
+    src: url('/src/assets/fonts/Gotham-Rounded-Book.ttf') ;
+  }

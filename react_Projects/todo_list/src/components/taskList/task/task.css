@@ -1,0 +1,48 @@
+.Task{
+display: inline-block;
+position: relative;
+width: 95%;
+left:50%;
+    transform: translateX(-50%);
+    margin: 10px 0px;
+    background: rgba(255, 251, 251, 0.459);
+border-radius: 20px;
+box-shadow: rgba(44, 43, 43, 0.2) 1px 3px
+
+
+}
+.Task::after {
+    content: "";
+    clear: both;
+    display: table;
+   
+}
+
+.BodyContainer{
+    position: relative;
+    display:inline-block;
+    float: left;
+    padding: 10px;
+    width:80%;
+    word-wrap: break-word;
+
+}
+.Title{
+    display: block;
+    text-emphasis: bold;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    float: left;
+    width:100%;
+    letter-spacing: 0.1rem;
+}
+.Body{
+    display: block;
+    width:100%;
+/* float:left; */
+/* padding:2px; */
+word-wrap: break-word;
+
+
+}

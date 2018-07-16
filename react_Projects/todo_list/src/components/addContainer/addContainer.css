@@ -1,0 +1,16 @@
+.Container{
+    display: inline-block;
+    position: relative;
+    width: 95%;
+    left:50%;
+    transform: translateX(-50%);
+    margin: 10px 0px;
+    background: rgba(255, 251, 251, 0.459);
+    border-radius: 20px;
+    box-shadow: rgba(44, 43, 43, 0.2) 1px 3px;
+    padding: 15px;
+
+}
+.Input{
+    
+}
