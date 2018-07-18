@@ -9,8 +9,9 @@
     color:#fff;
     text-align:center;
     text-decoration:none;
-    background: linear-gradient(to top,#327DF0,#4EAAF7);
-  
+    /* background: linear-gradient(to top,#327DF0,#4EAAF7); */
+    
+    background: #00BCD4;
     vertical-align: middle;
     font-size:2rem;
     font-weight:bold;
@@ -26,7 +27,7 @@
 
 .Add:hover{
     transform: translateY(-2px);
-    box-shadow: rgba(0, 0, 0, 0.185) 1px 4px;
+    box-shadow: rgba(0, 0, 0, .18) 1px 4px;
 }
 .Add:active{
     transform: translateY(2px);

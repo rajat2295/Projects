@@ -4,7 +4,8 @@ const edit =(props)=>{
 
     return(
         <div className={classes.ButtonDiv}>
-        <button className={classes.Edit}><i className="fa fa-pencil" aria-hidden="true"></i></button>
+        <button className={classes.Edit}
+        onClick={props.click}><i className="fa fa-pencil" aria-hidden="true"></i></button>
         </div> 
     )
 

@@ -3,64 +3,62 @@ import classes from './addContainer.css'
 import Add from '../toolbar/add/add'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {addTask} from '../../store/actions/actions'
-
+import {addTask,deleteTask} from '../../store/actions/actions'
+import moment from 'moment'
 
 class Addcontainer extends Component{
     
     state={
         title:'',
         body:'',
-        date:'',
-        time:''
+        dueDate:''
+        
+        
     }
-
-    onAddHandler=(event)=>{
-        event.preventDefault();
+   
+    onAddHandler=()=>{
+        
         
         this.props.addTask(this.state);
-
+        this.props.click();
+        
     }
-
-    renderTasks=()=>{
+    componentWillMount(){
         const tasks = this.props.tasks.tasks
-        console.log(tasks)
-        return(
-            <ul>
-                {
-                    tasks.map(task=>{
-                        return(
-                            <li key={task.id}>
-                            <div>{task.data.title}</div>
-                            </li>
-                            
-                        )
-                    })
-                }
-            </ul>
-        )
+        tasks.map(task=>{
+                               
+            if(task.id==this.props.id){
+                this.setState({title:task.data.title,body:task.data.body,dueDate:task.data.dueDate})
+                this.props.deleteTask(this.props.id);
+            }    
+    })
     }
+
+  
     
     
     render(){
+        let title,body,dueDate='';
+        
+           
+            
+         
+    
         
         return(
         <div className={classes.Container}>
-        <form >
-        <label>Title</label><input className={classes.Input} onChange={(event)=>this.setState({title: event.target.value})}/>
-        <label>Body</label><input className={classes.Input}  onChange={(event)=>this.setState({body: event.target.value})}/>
-        <label>Date</label><input className={classes.Input} type='date'  onChange={(event)=>this.setState({date: event.target.value})}/>
-        <label>Time</label><input className={classes.Input}  type='time'  onChange={(event)=>this.setState({time: event.target.value})}/>
+        
+        <label className={classes.Label}>Title</label><input className={classes.Input} placeholder='Add title' value={this.state.title} onChange={(event)=>this.setState({title: event.target.value})}/>
+        <label className={classes.Label}>Body</label><input className={classes.Input} placeholder='Description' value={this.state.body} onChange={(event)=>this.setState({body: event.target.value})}/>
+        <label className={classes.Label}>Date</label><input className={classes.Input} placeholder='Reminder' value={this.state.dueDate} type='datetime-local'  onChange={(event)=>this.setState({dueDate: event.target.value})}/>
+       
         <Add click={this.onAddHandler}/>
-        </form>
-        {this.renderTasks()}
+        
+       
         </div>
     )}
 }
 
-const mapDispatchToProps=(dispatch)=>{
-    return bindActionCreators({addTask},dispatch)
-}
 
 const mapStateToProps=(state)=>{
     
@@ -69,4 +67,4 @@ const mapStateToProps=(state)=>{
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Addcontainer);
+export default connect(mapStateToProps,{addTask,deleteTask})(Addcontainer);

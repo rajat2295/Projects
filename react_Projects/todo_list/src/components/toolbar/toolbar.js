@@ -8,7 +8,7 @@ const Toolbar =(props)=>{
     return(
         <div className={classes.Toolbar}>
             <Remove click={props.click}/>
-            <Edit />
+            <Edit   click={props.edit}/>
         </div>
     )
 }

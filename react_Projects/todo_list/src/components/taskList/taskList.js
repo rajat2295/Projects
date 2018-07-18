@@ -5,27 +5,49 @@ import classes from './tasklist.css'
 import Aux from '../../hoc/Aux'
 import {bindActionCreators} from 'redux'
 import {deleteTask} from '../../store/actions/actions'
-
+import moment from 'moment'
 class TaskList extends Component {
+    state={
+        time: Date.now(),
+        selectedTask:null
+    }
+    componentDidMount() {
+        this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+      }
 
+      componentWillUnmount() {
+        clearInterval(this.interval);
+      }
+
+      editTask=(id)=>{
+        this.setState({selectedTask:id})
+        this.props.editTask(id);
+        this.props.click();
+      }
+      
 
     
     renderTasks=()=>{
         const tasks = this.props.tasks.tasks
-        console.log(tasks)
+        
         return(
             <Aux>
                 {
                     tasks.map(task=>{
+                        
+                        let time=(Date.now()-new Date(task.data.dueDate).getTime())/1000
+                        if(time< 2 &&time>0){
+                            alert('Reminder: '+ task.data.title);
+                        }
                         return(
-                            // <li key={task.id}>
-                            // <div>{task.data.title}</div>
-                            // </li>
+                           
                             <Task key={task.id} 
                             title={task.data.title} 
                             body={task.data.body}
-                            click={(id)=>this.deleteTask(task.id)}/>
-
+                            dueDate={moment(new Date(task.data.dueDate)).fromNow()}
+                            click={(id)=>this.deleteTask(task.id)}
+                            edit={()=>this.editTask(task.id)}/>
+                            
                             
                         )
                     })
@@ -34,17 +56,15 @@ class TaskList extends Component {
         )
     }
     deleteTask=(id)=>{
-        console.log('deleting in app:',id);
-        console.log('this.props:',this.props);
+        
+        this.props.deleteTask(id)
     }
 
 
     render() {
-        console.log(this.props.tasks);
+        
         return (
             <div className={classes.List}>
-                <Task title='yoyo' body='kwqdbwqbdbdbwbdbwbdwbdbbbdbbhqwdbwqduiywqdgiuwquidugiwqduwquidouwqhdowqhdoqwdioqwoifhewojfeprwooprewgpiregierohigrehoighoirehighirehgiorehgioerghreo' />
-                <Task title='yoyo' body='kwqdbwqbdbdbwbdbwbdwbdbbbdbbhqwdbwqduiywqdgiuwquidugiwqduwquidouwqhdowqhdoqwdioqwoifhewojfeprwooprewgpiregierohigrehoighoirehighirehgiorehgioerghreo' />
                 {this.renderTasks()}
             </div>
         )

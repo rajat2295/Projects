@@ -9,8 +9,8 @@ class AddTask extends Component{
         return(
             <div className={classes.AddTask}>
                 <Header content='Add ToDo'/>
-                <AddContainer click={this.props.click}/>
-                <Add click={this.props.click}/>
+                <AddContainer click={this.props.click} id={this.props.id}/>
+                
             </div>
         )
     }

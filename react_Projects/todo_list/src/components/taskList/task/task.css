@@ -5,9 +5,11 @@ width: 95%;
 left:50%;
     transform: translateX(-50%);
     margin: 10px 0px;
-    background: rgba(255, 251, 251, 0.459);
-border-radius: 20px;
-box-shadow: rgba(44, 43, 43, 0.2) 1px 3px
+    background: #4e6170;
+border-radius: 7px;
+box-shadow: rgba(44, 43, 43, 0.2) 1px 3px;
+color:#fff;
+border: 2px solid #000;
 
 
 }
@@ -28,21 +30,46 @@ box-shadow: rgba(44, 43, 43, 0.2) 1px 3px
 
 }
 .Title{
-    display: block;
+    display: inline-block;
+
     text-emphasis: bold;
     font-size: 1.3rem;
     text-transform: capitalize;
     margin-bottom: 8px;
     float: left;
-    width:100%;
+    width:20%;
     letter-spacing: 0.1rem;
 }
-.Body{
+.Header{
     display: block;
     width:100%;
-/* float:left; */
-/* padding:2px; */
+    text-emphasis: bold;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    
+}
+.Header::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.DueDate{
+    display: inline-block;
+    
+    float: right;
+    width:70;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+.Body{
+    display: inline-block;
+    width:100%;
+
 word-wrap: break-word;
-
-
+}
+.Body::after {
+    content: "";
+    clear: both;
+    display: table;
 }

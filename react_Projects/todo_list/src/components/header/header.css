@@ -17,11 +17,13 @@
     padding: 5px 5px;
     width:50%;
     top: 50%;
-    border-radius: 10px;
-    background:linear-gradient(to top,#7f7fff,#6666ff);
+    /* border-radius: 10px; */
+    background:#4e6170;
+    border: 10px #000 10px ;
     font-family: 'gg';
     color: #fff;
     word-wrap: break-word;
+    border:   2px solid #000 ;
     /* display:block; */
     
     /* position: relative;

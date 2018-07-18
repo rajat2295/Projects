@@ -7,7 +7,7 @@
      }
  }
  export const deleteTask = (taskId) =>{
-     console.log('dleteing in actions');
+     
      return{
          
          type:'DELETE_TASK',

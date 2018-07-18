@@ -15,7 +15,7 @@
     color:#fff;
     text-align:center;
     text-decoration:none;
-    background: linear-gradient(to top,#004c00,#008000);
+    /* background: linear-gradient(to top,#004c00,#008000); */
     /* background: #008000; */
     /* margin: 0 auto; */
     vertical-align: middle;
@@ -28,11 +28,14 @@
     box-shadow: rgba(0, 0, 0, 0.185) 1px 2px;
     transition: 0.3s;
     border:none;
+    background: #00897B;
+box-shadow: rgba(0, 0, 0, 0.185) 1px 2px;
+
 }
 
 .Edit:hover{
 transform: translateY(-2px);
-box-shadow: rgba(0, 0, 0, 0.185) 1px 4px;
+box-shadow: rgba(0, 0, 0, .18) 1px 4px;
 }
 .Edit:active{
     transform: translateY(2px);
