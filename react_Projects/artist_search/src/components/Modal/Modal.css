@@ -1,4 +1,5 @@
 .Modal {
+    display: inline-block;
     position: fixed;
     z-index: 500;
     background-color: white;
@@ -24,10 +25,17 @@
 
 @media (max-width: 900px) {
     .Modal {
+        display: inline-block;
+
         width: 80%;
-        left: 0;
-        margin:40% 10%;
-        top: 0;
+        left: 10%;
+        top:20%;
+        
+        margin:0px;
+        
+        box-sizing: none;
+        transition: all 0.3s ease-out;
+        text-align: center;
         
     }
 }

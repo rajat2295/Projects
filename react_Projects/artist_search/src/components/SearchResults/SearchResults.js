@@ -11,18 +11,18 @@ class SearchResults extends Component {
     componentDidMount() {
         axios.get('http://itunes.apple.com/search?term='+this.props.name+'&limit='+this.props.number)
             .then(response => {
-                console.log(response.data)
+                
                 this.setState({ results: response.data.results })
-                console.log(this.state.results);
+                
             }).catch(error=>{
-                console.log(error);
+                
             })
     }
 
 
 
     render=()=> {
-        console.log(this.state.results);
+        
         const results = this.state.results.map(result => {
             return (<SearchResult key={result.trackId}
                 artistName={result.artistName}

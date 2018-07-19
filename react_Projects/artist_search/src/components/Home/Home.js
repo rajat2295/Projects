@@ -58,7 +58,7 @@ class Home extends Component {
     }
     searchRevokeHandler = () => {
         this.setState({ searching: false });
-        // console.log('hello')
+        
     }
     startSearchHandler = () => {
         this.setState({ show: true });
@@ -83,11 +83,11 @@ class Home extends Component {
         }
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid= this.chackValidity(updatedFormElement.value,updatedFormElement.validation)
-        console.log(updatedFormElement.valid);
+        
         updatedSearchData["name"] = updatedFormElement;
         this.setState({ search: updatedSearchData });
 
-        console.log(this.state.search);
+        
         this.searchable;
     }
     inputChangeHandlerNumber = (event) => {
@@ -101,7 +101,7 @@ class Home extends Component {
         updatedFormElement.valid= this.chackValidity(updatedFormElement.value,updatedFormElement.validation)
         updatedSearchData["number"] = updatedFormElement
         this.setState({ search: updatedSearchData });
-        console.log(this.state.search);
+        
         this.searchable;
 
     }

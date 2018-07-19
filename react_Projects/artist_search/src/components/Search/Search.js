@@ -33,7 +33,7 @@ class Search extends Component {
         this.setState({ loading: true });
 
         axios.get('http://itunes.apple.com/search?term=' + name + '&limit=' + number)
-        // console.log(this.state)
+        
     }
 
 
@@ -45,7 +45,7 @@ class Search extends Component {
                 <div className={classes.Head}>
                     <h1 >Enter Search Criteria</h1>
                 </div>
-                <form onSubmit={this.props.searched}>
+                <form onSubmit={this.props.searched} autoComplete="off">
                     <div className={classes.Row}>
                         <div className={classes.Col30}>
                             <p className={classes.Label}>Artist Name</p>
