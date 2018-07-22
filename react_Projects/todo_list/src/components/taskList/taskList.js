@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Task from './task/task'
 import classes from './tasklist.css'
 import Aux from '../../hoc/Aux'
-import {bindActionCreators} from 'redux'
 import {deleteTask} from '../../store/actions/actions'
 import moment from 'moment'
 class TaskList extends Component {
@@ -15,7 +14,7 @@ class TaskList extends Component {
         this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
       }
 
-      componentWillUnmount() {
+        componentWillUnmount() {
         clearInterval(this.interval);
       }
 

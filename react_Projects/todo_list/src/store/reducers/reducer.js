@@ -2,9 +2,6 @@ import * as actionsTypes from '../actions/actions'
 import {combineReducers} from 'redux'
 import {bake_cookie,read_cookie} from 'sfcookies'
 
-
-
-
 const addTask=(action)=>{
     return{
         data:action.payload,

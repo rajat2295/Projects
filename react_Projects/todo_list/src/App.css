@@ -1,6 +1,5 @@
 .Outer{
     font-family: "gg";
-    /* background: linear-gradient(to top,#e5e5ff,#9999ff); */
     background: linear-gradient(to top,rgb(60, 74, 88),#323E4A);
     margin:0;
     padding: 0;
@@ -14,7 +13,6 @@
   text-align: center;
   padding: 10px;
   display: inline-block;
-  /* position: absolute; */
   margin-left: 50%;
   transform: translateX(-50%);
 }
