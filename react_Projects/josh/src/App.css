@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem; }
+
+.App {
+  text-align: center; }
+
+.footer {
+  display: block;
+  color: #fff;
+  background: #000; }
+  .footer::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .footer__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 1.5rem;
+    float: left;
+    padding: 1rem; }
+  .footer__LOGO {
+    float: right;
+    right: 0; }

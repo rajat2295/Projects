@@ -1,0 +1,54 @@
+$text-color:#fff;
+$color-black:#000;
+
+
+@mixin clearfix {
+  &::after {
+      content:"";
+      display:table;
+      clear:both;
+  }
+}
+
+
+* ,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; 
+}
+
+body{
+   
+    box-sizing: border-box; 
+    font-size: 1.6rem;
+
+}
+.App {
+  text-align: center;
+  
+}
+
+.footer{
+  display:block;
+  color:$text-color;
+  background: $color-black;
+  @include clearfix;
+
+  &__link{
+    text-decoration: none;
+    color: $text-color;
+    margin-right:1.5rem;
+    float: left;
+    padding:1rem;
+  }
+  &__LOGO{
+    float: right;
+    right: 0;
+  }
+}
+
